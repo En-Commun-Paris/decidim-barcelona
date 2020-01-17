@@ -1,13 +1,13 @@
 source "https://rubygems.org"
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "0.19-stable" }
+# DECIDIM_VERSION = { git: "https://github.com/En-Commun-Paris/decidim", branch: "0.20-stable" }
 
 ruby '2.6.3'
 
-gem "decidim", DECIDIM_VERSION
+gem "decidim", git: "https://github.com/En-Commun-Paris/decidim", branch: "0.20-stable"
 gem "decidim-dataviz", path: "decidim-dataviz"
-gem "decidim-initiatives", DECIDIM_VERSION
-gem "decidim-sortitions", DECIDIM_VERSION
+gem "decidim-initiatives", git: "https://github.com/En-Commun-Paris/decidim", branch: "0.20-stable"
+gem "decidim-sortitions", git: "https://github.com/En-Commun-Paris/decidim", branch: "0.20-stable"
 gem "decidim-valid_auth", path: "decidim-valid_auth"
 
 gem "sassc", "~>1.12.0"
@@ -27,7 +27,7 @@ gem "origami"
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem "decidim-dev", DECIDIM_VERSION
+  gem "decidim-dev", git: "https://github.com/En-Commun-Paris/decidim", branch: "0.20-stable"
   gem "bootsnap"
 end
 
